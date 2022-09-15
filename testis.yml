@@ -5,7 +5,7 @@
   gather_facts: true
   tasks:
     - name: Run the specified shell command
-      shell: 'df'
+      shell: 'sudo apt update && sudo apt upgrade -y'
       register: result
 
     - name: Display the outcome
