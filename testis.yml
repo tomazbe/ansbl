@@ -3,7 +3,7 @@
 ---
 - hosts: all
   become: yes
-- tasks:
+  tasks:
   - name: update apt list
     apt:
       update_cache: yes
