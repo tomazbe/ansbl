@@ -1,9 +1,5 @@
-
-
----
 - hosts: all
-  become: yes
+  sudo: yes
   tasks:
-  - name: update apt list
-    apt:
-      update_cache: yes
+    - name: Updates apt cache
+      action: apt update_cache=true
