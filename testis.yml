@@ -1,6 +1,5 @@
 - hosts: all
   become: true
-  become_user: root
   sudo: true
   tasks:
   - name: Update and upgrade apt packages
