@@ -3,9 +3,9 @@
   become: yes
   become_method: sudo
   tasks:
-  - name: "Update Repository cache"
+  - name: -----> Update / Upgrade
     apt: upgrade=dist force_apt_get=yes
     
-  - name: Check if a reboot is needed for Debian and Ubuntu boxes
+  - name: -----> Preveri ce potreben restart
     register: reboot_required_file
     stat: path=/var/run/reboot-required get_md5=no
