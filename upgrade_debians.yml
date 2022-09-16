@@ -3,9 +3,9 @@
   become: yes
   become_method: sudo
   tasks:
-  - name: -----> Update / Upgrade
+  - name: Update / Upgrade
     apt: upgrade=dist force_apt_get=yes
     
-  - name: -----> Preveri ce potreben restart
+  - name: Preveri ce potreben restart
     register: reboot_required_file
     stat: path=/var/run/reboot-required get_md5=no
