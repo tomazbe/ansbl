@@ -1,0 +1,7 @@
+- name: Update pihole
+  hosts: maline
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: Pihole Update
+    shell: pihole -up
